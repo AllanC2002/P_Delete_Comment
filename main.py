@@ -30,7 +30,7 @@ def delete_usercomment():
     body = request.json
     comment_id = body.get("comment_id")
 
-    # 🔧 Aquí devolvemos tal cual lo que regresa la función
+
     return delete_comment(comment_id, user_id)
 
 
