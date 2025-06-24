@@ -1,13 +1,13 @@
 import requests
 
-BASE_URL = "http://localhost:8081/delete-comment"
+BASE_URL = "http://52.204.34.56:8080/delete-comment"
 
 login_data = {
-    "User_mail": "ascorread1",  
+    "User_mail": "allan",  
     "password": "1234"
 }
 
-login_response = requests.post("http://localhost:8080/login", json=login_data)
+login_response = requests.post("http://52.203.72.116:8080/login", json=login_data)
 if login_response.status_code != 200:
     print("Login error:", login_response.status_code, login_response.text)
     exit()
@@ -20,7 +20,7 @@ headers = {
     "Content-Type": "application/json"
 }
 
-comment_id = "685772c09d450317d6b0ec4b"  
+comment_id = "685b07bebd25718085c30bb5"  
 
 payload = {
     "comment_id": comment_id
